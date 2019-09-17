@@ -28,7 +28,7 @@ xhost local:root
 ```
 Start the container for telemetry only flows with the following: 
 ```
-docker run --rm -it -e DISPLAY --net=host gi7ugv/gr-satellites
+docker run --rm -it -e DISPLAY --net=host --ipc=host --pid=host gi7ugv/gr-satellites
 ```
 It starts with the QO-100 flow open, the others are available to load from gnuradio-companion.
 

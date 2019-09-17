@@ -23,4 +23,4 @@ RUN sed -i "s/xterm_executable =.*/xterm_executable = \/usr\/bin\/xterm/" /etc/g
 #RUN apt-get install -y firefox pulseaudio-utils
 #RUN apt-get install -y pavucontrol alsa-base alsa-utils 
 
-CMD (cd gr-satellites/apps;gnuradio-companion gr-satellites/apps/qo100.grc)
+CMD (cd gr-satellites/apps;gnuradio-companion qo100.grc)

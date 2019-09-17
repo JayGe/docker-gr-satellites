@@ -13,22 +13,22 @@ It's huge and not set up well, I'll try and fix it up a bit.
 
 To build from github:
 ```
- git clone https://github.com/JayGe/docker-gr-satellites.git
- docker build . -t gi7ugv/gr-satellites
+git clone https://github.com/JayGe/docker-gr-satellites.git
+docker build . -t gi7ugv/gr-satellites
 ```
 Or pulled from docker hub with:
 ```
- docker pull gi7ugv/gr-satellites
+docker pull gi7ugv/gr-satellites
 ```
 ## Usage
 
 You firstly will have to run something like the following to allow the X11 connection from the container to your local X server:
 ```
- xhost local:root
+xhost local:root
 ```
 Start the container for telemetry only flows with the following: 
 ```
- docker run --rm -it -e DISPLAY --net=host gi7ugv/gr-satellites
+docker run --rm -it -e DISPLAY --net=host gi7ugv/gr-satellites
 ```
 It starts with the QO-100 flow open, the others are available to load from gnuradio-companion.
 

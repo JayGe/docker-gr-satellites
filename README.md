@@ -3,9 +3,9 @@ gr-satellites in docker
 
 ## About
 
-This docker container has gnuradio and gr-satellites installed.
+Docker with GNU Radion and gr-satellites from https://github.com/daniestevez/gr-satellites installed. 
 
-It's huge and not set up well, I'll try and fix it up a bit but don't expect it to work!
+It's huge and not set up well, I'll try and fix it up a bit.
 
 ## Building 
 

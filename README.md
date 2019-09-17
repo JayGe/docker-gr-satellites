@@ -21,6 +21,7 @@ To build from github:
  docker build . -t gi7ugv/gr-satellites
 
 Or pulled from docker hub with:
+
  docker pull gi7ugv/gr-satellites
  
 ## Usage
@@ -35,7 +36,7 @@ Start the container for telemetry only flows with the following:
  
 It starts with the QO-100 flow open, the others are available to load from gnuradio-companion.
 
-Input audio over the network as described in the gr-satellites documentation. By default the flows will listen on the local interface of the host so GQRX UDP audio to 127.0.0.1:7355 should be available to the flows. 
+Input audio over the network as described in the gr-satellites documentation. By default the flows will listen on the local interface of the host so GQRX UDP audio to 127.0.0.1:7355 running on the host should be available to the flows. 
 
 For flows with audio out if there are any either run the following or use pulse over a network connection, not confirmed this works yet:
 

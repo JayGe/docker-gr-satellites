@@ -13,7 +13,7 @@ It's huge and not set up well, I'll try and fix it up a bit.
 
 To build from github:
 ```
- git pull https://github.com/JayGe/docker-gr-satellites.git
+ git clone https://github.com/JayGe/docker-gr-satellites.git
  docker build . -t gi7ugv/gr-satellites
 ```
 Or pulled from docker hub with:

@@ -5,7 +5,7 @@ gr-satellites in docker
 
 This is a GNU Radio installation with gr-satellites installed. Using Ubuntu 19.10 the GNU Radio version from repository should be > 3.7.13.4.
 
-Gr-satellites should be the latest from https://github.com/daniestevez/gr-satellites.
+Gr-satellites should be the latest from https://github.com/daniestevez/gr-satellites. The gr-aausat and gr-lilacsat out-of-tree modules are also installed.
 
 It's huge and not set up well, I'll try and fix it up a bit.
 

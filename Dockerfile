@@ -22,9 +22,10 @@ RUN git clone https://github.com/wnagele/gr-gpredict-doppler.git;cd gr-gpredict-
 
 RUN git clone https://github.com/daniestevez/gr-frontends.git
 
-RUN sed -i "s/xterm_executable =.*/xterm_executable = \/usr\/bin\/xterm/" /etc/gnuradio/conf.d/grc.conf
+RUN git clone https://github.com/bg2bhc/gr-lilacsat.git; cd gr-lilacsat; mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=/usr ../; make; make install
 
-#RUN apt-get install -y firefox pulseaudio-utils
-#RUN apt-get install -y pavucontrol alsa-base alsa-utils 
+RUN git clone https://github.com/daniestevez/gr-aausat.git; cd gr-aausat; mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=/usr ../; make; make install
+
+RUN sed -i "s/xterm_executable =.*/xterm_executable = \/usr\/bin\/xterm/" /etc/gnuradio/conf.d/grc.conf
 
 CMD (cd gr-satellites/apps;gnuradio-companion qo100.grc)

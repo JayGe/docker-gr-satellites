@@ -18,6 +18,10 @@ RUN git clone https://github.com/daniestevez/gr-satellites.git; cd gr-satellites
 
 RUN cd gr-satellites;./compile_hierarchical.sh
 
+RUN git clone https://github.com/wnagele/gr-gpredict-doppler.git;cd gr-gpredict-doppler;mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=/usr ../; make; make install
+
+RUN git clone https://github.com/daniestevez/gr-frontends.git
+
 RUN sed -i "s/xterm_executable =.*/xterm_executable = \/usr\/bin\/xterm/" /etc/gnuradio/conf.d/grc.conf
 
 #RUN apt-get install -y firefox pulseaudio-utils

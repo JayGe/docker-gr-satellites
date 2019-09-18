@@ -1,11 +1,19 @@
 # docker-gr-satellites
-gr-satellites in docker
+gr-satellites in Docker
 
 ## About
 
 This is a GNU Radio installation with gr-satellites installed. Using Ubuntu 19.10 the GNU Radio version from repository should be > 3.7.13.4.
 
-Gr-satellites should be the latest from https://github.com/daniestevez/gr-satellites. The gr-aausat and gr-lilacsat out-of-tree modules are also installed.
+Gr-satellites should be the latest from https://github.com/daniestevez/gr-satellites. 
+
+Also included as suppliments to or dependencies of some of the flows are the following modules:
+
+* gr-frontends
+* gr-gpredict-doppler
+* gr-aausat
+* gr-lilacsat
+* gr-equisat_decoder
 
 It's huge and not set up well, I'll try and fix it up a bit.
 
@@ -33,6 +41,8 @@ docker run --rm -it -e DISPLAY --net=host --ipc=host --pid=host gi7ugv/gr-satell
 It starts with the QO-100 flow open, the others are available to load from gnuradio-companion.
 
 Input audio over the network as described in the gr-satellites documentation. By default the flows will listen on the local interface of the host so GQRX UDP audio to 127.0.0.1:7355 running on the host should be available to the flows. 
+ 
+Also included are the gr-frontend flows to allow other input methods. 
 
 For flows with audio out if there are any either run the following or use pulse over a network connection, not confirmed this works yet:
 ```

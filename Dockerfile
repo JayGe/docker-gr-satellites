@@ -14,7 +14,9 @@ RUN git clone https://github.com/daniestevez/libfec.git;cd libfec;./configure;ma
 
 RUN wget https://files.pythonhosted.org/packages/19/c0/f054941fa33d14378de66d2c0477d31f7ad97aa2e298a5771a7b20bc2039/construct-2.9.45.tar.gz; tar -zxvf construct-2.9.45.tar.gz; cd construct-2.9.45; python setup.py install; rm ../construct-2.9.45.tar.gz
 
-RUN git clone https://github.com/daniestevez/gr-satellites.git; cd gr-satellites; mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=/usr ../; make; make install
+#RUN git clone https://github.com/daniestevez/gr-satellites.git; cd gr-satellites; mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=/usr ../; make; make install
+
+RUN wget https://github.com/daniestevez/gr-satellites/archive/v1.8.1.tar.gz; tar -zxvf v1.8.1.tar.gz; rm v1.8.1.tar.gz; mv gr-satellites-1.8.1 gr-satellites; cd gr-satellites; mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=/usr ../; make; make install
 
 RUN cd gr-satellites;./compile_hierarchical.sh
 

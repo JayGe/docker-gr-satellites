@@ -3,11 +3,11 @@ gr-satellites in Docker
 
 ## About
 
-This is a GNU Radio install with gr-satellites. 
+This is a GNU Radio install with gr-satellites 1.8.1. 
 
-Using Ubuntu 19.10 the GNU Radio version from repository should be > 3.7.13.4.
+Using Ubuntu 19.10 the GNU Radio version from repository will be > 3.7.13.4.
 
-Gr-satellites should be the latest from https://github.com/daniestevez/gr-satellites. 
+Gr-satellites is the release version 1.8.1 from https://github.com/daniestevez/gr-satellites. 
 
 Also included as suppliments to or dependencies of some of the flows are the following modules:
 
